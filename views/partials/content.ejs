@@ -1,4 +1,16 @@
 <div class="content__general">
     <h1> <%= title %> </h1>
     <p> <%= text %> </p>
+  
+    <% eachPost.forEach( (element)=> { %>
+
+        <h1><%= element.title %></h1>
+        <p> <%= element.text %> </p>
+
+        <% }) %>
     </div>
+
+
+
+
+
