@@ -1,5 +1,17 @@
-<%- include("./partials/header.ejs") -%>
+  
+    <%- include("./partials/header.ejs") -%>
 
-<%- include("./partials/content.ejs") -%>
+<div class="content__general">
+    <h1> <%= title %> </h1>
+    <p> <%= text %> </p>
+
+    <% tPost.forEach( (element)=> { %>
+
+            <h1><%= element.title %></h1>
+        <p> <%= element.text.substring(0, 120) %><span class="show-text"><a href='/posts/${<%= element.title %>}'>... Read More</span></a></p>
+
+        <% })  %>
+
+    </div>
 
 <%- include("./partials/footer.ejs") -%>

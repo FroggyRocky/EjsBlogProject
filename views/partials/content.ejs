@@ -1,16 +1,26 @@
+<% const showHideText = document.querySelector(".show-text") %> 
+<% function hideShow() { %> 
+<% showHideText.classList.toggle("") %> 
+    <% } %> 
+
 <div class="content__general">
     <h1> <%= title %> </h1>
     <p> <%= text %> </p>
-  
-    <% eachPost.forEach( (element)=> { %>
 
-        <h1><%= element.title %></h1>
-        <p> <%= element.text %> </p>
+    <% tPost.forEach( (element)=> { %>
+        <% if (document.querySelector(".content__general").classList.contains("showMore")){ %>
+        <h1> <%= element.title %> </h1>
+        <p> <%= element.text %> <span class="show-text"> ...Show Less </span></p>
+        <% } %>  
 
-        <% }) %>
+        <% if { %> 
+            <h1><%= element.title %></h1>
+        <p> <%= element.text %><span class="show-text" onclick= "hideShow()"> ...Show More</span></p> 
+        <% } %> 
+        
+        <% })  %>
+
     </div>
-
-
 
 
 
