@@ -1,0 +1,20 @@
+  
+    <%- include("./partials/header.ejs") -%>
+
+<div class="content__general">
+
+    <% tPost.forEach( (element)=> { %>
+
+            <h1><%= element.title %></h1>
+        <p> <%= element.text.substring(0, 120) %>
+            <% if (element.title === "Home") { %>
+<span class="write-post"><a href='/compose'>... Write a Post ...</span></a></p>
+          <%  } else { %>
+<span class="show-text"><a href='/posts/${<%= element.title %>}'>... Read More</span></a></p>
+          <% } %> 
+            
+        <% })  %>
+
+    </div>
+
+<%- include("./partials/footer.ejs") -%>

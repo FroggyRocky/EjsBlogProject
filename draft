@@ -1,0 +1,46 @@
+db.products.insertMany(
+    {
+        id:3,
+        name:"knives",
+        quantity:100,
+        price: 50,
+        location:"lost heaven",
+        reviews: [
+            {
+                author:"Richard", 
+                rating:5,
+                review:"very durable ribbons and colors are very bright"
+            },
+            {
+                author: "Maria", 
+                rating:4, 
+                review:"good ribbons but very exprensive"
+            },
+            {
+                author:"John",
+                rating:5,
+                review:"very good quality"
+            }
+        ]
+    }
+)
+
+db.products.update({id:1},{$set:{
+    review:[
+        {
+                author: "Julia", 
+                rating:3, 
+                review:""
+        },
+        {
+               author: "Elvis", 
+                rating:5, 
+                review:"boxes are bigger than in the pictures on the website"
+        },
+        {
+               author: "Johnny", 
+                rating:5, 
+                review:"good price, cheaper than in other shops"
+        }
+    ]
+}})

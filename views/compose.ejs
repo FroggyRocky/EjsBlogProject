@@ -1,0 +1,12 @@
+<%- include("./partials/header.ejs") -%>
+
+<div class="content__general">
+<h1> <%= title %> </h1>
+<form class="form" action="/compose" method="POST">
+    <label for="title">Title</label>
+<input class="form__input" type="text" name="postTitle">
+<label for="post">Post</label>
+<textarea class="form__text" name="postText" id="" cols="30" rows="10"></textarea>
+<button class="form__btn" type="submit">Publish</button>
+</form>
+</div>
