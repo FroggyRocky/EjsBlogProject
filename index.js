@@ -9,7 +9,7 @@ app.set("view-engine", "ejs");
 
 
 
-mongoose.connect("mongodb://localhost:27017/blogDB", {userNewUrlParser:true});
+mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser:true});
 
 
 
